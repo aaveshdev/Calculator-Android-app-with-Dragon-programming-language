@@ -1,0 +1,376 @@
+select "android"
+select "math"
+
+ln = newRelativeLayout()
+ln.setLayoutParams({"layout_height":MATCH_PARENT,"layout_width":MATCH_PARENT})
+ln.setBackgroundColor(47,79,79)
+flag = false
+val = 0
+lhead = newRelativeLayout()
+lhead.setLayoutParams({"layout_height":WRAP_CONTENT,"layout_width":MATCH_PARENT})
+tms = lhead.createAlignRight()
+
+lhead.setBackgroundColor(0,0,0)
+lhead.setPadding(0,0,0,200)
+tx = newTextView()
+tx.setText("0")
+tx.setTextSize(50)
+tx.setTextColor(255,255,255)
+tx.setLParams(tms)
+tx.setVerticalScrollBar(true)
+tx.setMaxLines(2)
+lhead.addView(tx)
+ln.addView(lhead)
+
+btm = ln.createAlignBottomCenter()
+ln2 = newLinearLayout()
+ln2.setLParams(btm)
+
+ln2.setOrientation(LinearLayout.VERTICAL)
+grid = newGridLayout()
+grid.setLayoutParams({"layout_height":WRAP_CONTENT,"layout_width":MATCH_PARENT})
+lms = grid.createParams(0,0,0,4,Gravity.FILL,2,1)
+dms = grid.createParams(0,0,2,4,Gravity.FILL_VERTICAL,1,1)
+grid.setColumnCount(4)
+grid.setRowCount(7)
+grid.setOrientation(GridLayout.HORIZONTAL)
+grid.setUseDefaultMargins(true)
+
+
+one = newButton()
+one.setText("1")
+one.setTextColor(255,255,255)
+one.setTextSize(35)
+one.setBackgroundColor(0,0,0)
+two = newButton()
+two.setText("2")
+two.setTextColor(255,255,255)
+two.setTextSize(35)
+two.setBackgroundColor(0,0,0)
+
+three = newButton()
+three.setText("3")
+three.setTextColor(255,255,255)
+three.setTextSize(35)
+three.setBackgroundColor(0,0,0)
+div = newButton()
+div.setText("/")
+div.setTextColor(255,255,255)
+div.setTextSize(35)
+div.setBackgroundColor(0,206,209)
+four = newButton()
+four.setText("4")
+four.setTextColor(255,255,255)
+four.setTextSize(35)
+four.setBackgroundColor(0,0,0)
+
+five = newButton()
+five.setText("5")
+five.setTextColor(255,255,255)
+five.setTextSize(35)
+five.setBackgroundColor(0,0,0)
+
+six = newButton()
+six.setText("6")
+six.setTextColor(255,255,255)
+six.setTextSize(35)
+six.setBackgroundColor(0,0,0)
+
+mul = newButton()
+mul.setText("x")
+mul.setTextColor(255,255,255)
+mul.setTextSize(35)
+mul.setBackgroundColor(0,206,209)
+seven = newButton()
+seven.setText("7")
+seven.setTextColor(255,255,255)
+seven.setTextSize(35)
+seven.setBackgroundColor(0,0,0)
+
+eight = newButton()
+eight.setText("8")
+eight.setTextColor(255,255,255)
+eight.setTextSize(35)
+eight.setBackgroundColor(0,0,0)
+nine = newButton()
+nine.setText("9")
+nine.setTextColor(255,255,255)
+nine.setTextSize(35)
+nine.setBackgroundColor(0,0,0)
+minus = newButton()
+minus.setText("-")
+minus.setTextColor(255,255,255)
+minus.setTextSize(35)
+minus.setBackgroundColor(0,206,209)
+zero = newButton()
+zero.setText("0")
+zero.setTextColor(255,255,255)
+zero.setTextSize(35)
+zero.setBackgroundColor(0,0,0)
+zero.setLParams(lms)
+
+dot = newButton()
+dot.setText(".")
+dot.setTextColor(255,255,255)
+dot.setTextSize(35)
+dot.setBackgroundColor(0,0,0)
+dot.setLParams(dms)
+
+plus = newButton()
+plus.setText("+")
+plus.setTextColor(255,255,255)
+plus.setTextSize(30)
+plus.setBackgroundColor(0,206,209)
+plm = grid.createParams(0,0,3,4,Gravity.FILL_VERTICAL,1,2)
+plus.setLParams(plm)
+
+clear = newButton()
+clear.setText("Clear")
+clear.setTextSize(35)
+clear.setTextColor(255,255,255)
+clear.setBackgroundColor(32,178,170)
+
+clm = grid.createParams(0,0,0,6,Gravity.FILL,3,1)
+clear.setLParams(clm)
+equal = newButton()
+equal.setText("=")
+equal.setTextColor(255,255,255)
+equal.setTextSize(35)
+equal.setBackgroundColor(210,105,30)
+elm = grid.createParams(0,0,0,5,Gravity.FILL,3,1)
+
+equal.setLParams(elm)
+
+mod = newButton()
+mod.setText("%")
+mod.setTextColor(255,255,255)
+mod.setTextSize(35)
+mod.setBackgroundColor(0,206,209)
+
+clear.onClick(func(){
+if flag == false
+   tx.setText("0")
+end
+else
+    flag = false
+    tx.setText("0")
+end
+})
+
+one.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("1")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"1")
+end
+})
+
+two.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("2")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"2")
+end
+})
+
+three.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("3")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"3")
+end
+})
+
+four.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("4")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"4")
+end
+})
+
+five.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("5")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"5")
+end
+})
+
+six.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("6")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"6")
+end
+})
+
+seven.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("7")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"7")
+end
+})
+
+eight.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("8")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"8")
+end
+})
+
+nine.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("9")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"9")
+end
+})
+
+zero.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("0")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"0")
+end
+})
+
+dot.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText(".")
+end
+else
+   val = tx.getText()
+    tx.setText(val+".")
+end
+})
+
+plus.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("+")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"+")
+end
+})
+
+minus.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("-")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"-")
+end
+})
+
+mul.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("*")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"*")
+end
+})
+
+div.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("/")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"/")
+end
+})
+
+mod.onClick(func(){
+if flag == false
+  flag = true
+   tx.setText("%")
+end
+else
+   val = tx.getText()
+    tx.setText(val+"%")
+end
+})
+
+equal.onClick(func(){
+if flag == true
+   ans = tx.getText()
+  ans = eval(ans)
+  tx.setText(ans)
+end
+})
+
+
+
+
+grid.addView(one)
+grid.addView(two)
+grid.addView(three)
+grid.addView(div)
+grid.addView(four)
+grid.addView(five)
+grid.addView(six)
+grid.addView(mul)
+grid.addView(seven)
+grid.addView(eight)
+grid.addView(nine)
+grid.addView(minus)
+grid.addView(zero)
+grid.addView(dot)
+grid.addView(plus)
+grid.addView(equal)
+grid.addView(clear)
+grid.addView(mod)
+ln2.addView(grid)
+sp = newButton()
+sp.setText("Info")
+sp.setTextColor(255,255,255)
+sp.setBackgroundColor(0,0,0)
+sp.onClick(func(){
+   alert = newAlert()
+    alert.setMessage("<font color='#000000'><big>Calculator App<br>Made with Dragon &hearts;</big></font>")
+alert.setCloseButton("Close")
+alert.Open()
+
+})
