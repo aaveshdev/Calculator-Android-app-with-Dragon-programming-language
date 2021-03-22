@@ -1,6 +1,7 @@
 select "android"
 select "math"
 
+//main View
 ln = newRelativeLayout()
 ln.setLayoutParams({"layout_height":MATCH_PARENT,"layout_width":MATCH_PARENT})
 ln.setBackgroundColor(47,79,79)
@@ -12,6 +13,8 @@ tms = lhead.createAlignRight()
 
 lhead.setBackgroundColor(0,0,0)
 lhead.setPadding(0,0,0,200)
+
+//Answer TextView
 tx = newTextView()
 tx.setText("0")
 tx.setTextSize(50)
@@ -36,6 +39,8 @@ grid.setRowCount(7)
 grid.setOrientation(GridLayout.HORIZONTAL)
 grid.setUseDefaultMargins(true)
 
+
+//Button components 
 
 one = newButton()
 one.setText("1")
@@ -146,6 +151,8 @@ mod.setText("%")
 mod.setTextColor(255,255,255)
 mod.setTextSize(35)
 mod.setBackgroundColor(0,206,209)
+
+//Button Operations Here
 
 clear.onClick(func(){
 if flag == false
@@ -342,7 +349,7 @@ end
 })
 
 
-
+//Views Added Here
 
 grid.addView(one)
 grid.addView(two)
@@ -368,6 +375,7 @@ sp.setText("Info")
 sp.setTextColor(255,255,255)
 sp.setBackgroundColor(0,0,0)
 sp.onClick(func(){
+//Info AlertBox
    alert = newAlert()
     alert.setMessage("<font color='#000000'><big>Calculator App<br>Made with Dragon &hearts;</big></font>")
 alert.setCloseButton("Close")
