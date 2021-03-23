@@ -382,3 +382,7 @@ alert.setCloseButton("Close")
 alert.Open()
 
 })
+
+ln2.addView(sp)
+ln.addView(ln2)
+showPanel(ln)
